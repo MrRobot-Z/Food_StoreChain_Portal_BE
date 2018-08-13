@@ -49,7 +49,7 @@ public class ItemResources {
     public Response getItem(@PathParam("id") Long id) {
         try {
             return Response.ok().
-                    entity(repo.getUser(id)).
+                    entity(repo.getItem(id)).
                     build();
         } catch (Exception e) {
             LOGGER.log(SEVERE, e.getMessage(), e);
