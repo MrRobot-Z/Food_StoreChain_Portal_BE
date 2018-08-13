@@ -8,7 +8,7 @@ You can check the Front-End Part <i><u>[Here](https://github.com/MrRobot-Z/Food_
 ## Dependencies
 
 + JAVA EE 8
-
++ Maven
 + MySQL Database
 
 
