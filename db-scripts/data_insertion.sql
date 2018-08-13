@@ -18,11 +18,11 @@ INSERT INTO FEEDBACK(USER_ID, USER_COMMENT) VALUES
 (3, "Test3");
 
 INSERT INTO ITEMS(NAME, S_PRICE, M_PRICE, L_PRICE, URL) VALUES
-("Cheese Burger"	, 30, 40, 50, "img/zTesti"),
-("BBQ Pizza"		, 50, 60, 70, "img/zTesti"),
-("Blizzard"			, 30, 40, 50, "img/zTesti"),
-("Apple Pie"		, 12, 20, 35, "img/zTesti"),
-("Pepsi"			, 10, 15, 20, "img/zTesti");
+("Cheese Burger"	, 30, 40, 50, "img/meals/Burger1.jpg"),
+("BBQ Pizza"		, 50, 60, 70, "img/meals/Pizza1.jpg"),
+("Blizzard"			, 30, 40, 50, "img/meals/DQ1.jpg"),
+("Apple Pie"		, 12, 20, 35, "img/meals/Pie1.jpg"),
+("Pepsi"			, 10, 15, 20, "img/meals/Pepsi1.jpg");
 
 
 -- Inserting some orders for testing 
