@@ -1,12 +1,16 @@
 package repositories.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Objects;
 
 import static constants.Constants.SCHEMA_NAME;
+import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
@@ -35,6 +39,11 @@ public class Item implements Serializable {
 
     @Column(name = "URL")
     private String url;
+
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "itemAssociation", cascade = ALL, orphanRemoval = true)
+    private Collection<OrderItem> orders;
 
 
     public Item() {
@@ -94,6 +103,14 @@ public class Item implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Collection<OrderItem> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Collection<OrderItem> orders) {
+        this.orders = orders;
     }
 
     @Override

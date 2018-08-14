@@ -11,15 +11,8 @@
         <class>repositories.entity.Address</class>
         <class>repositories.entity.Feedback</class>
         <class>repositories.entity.Item</class>
-
-
-        <!--<class>com.sumerge.grad.program.jpa.entity.Address</class>-->
-        <!--<class>com.sumerge.grad.program.jpa.entity.Complain</class>-->
-        <!--<class>com.sumerge.grad.program.jpa.entity.Item</class>-->
-        <!--<class>com.sumerge.grad.program.jpa.entity.Order</class>-->
-        <!--<class>com.sumerge.grad.program.jpa.entity.User</class>-->
-        <!--<class>com.sumerge.grad.program.jpa.entity.OrderItem</class>-->
-        <!--<class>com.sumerge.grad.program.jpa.entity.OrderItemId</class>-->
+        <class>repositories.entity.Order</class>
+        <class>repositories.entity.OrderItem</class>
 
         <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
         <validation-mode>NONE</validation-mode>

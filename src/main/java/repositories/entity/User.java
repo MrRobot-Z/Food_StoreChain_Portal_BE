@@ -45,6 +45,10 @@ public class User implements Serializable {
     @OneToMany(fetch = LAZY, cascade = ALL)
     private Collection<Feedback> feedbacks;
 
+    @JoinColumn(name = "USER_ID")
+    @OneToMany(fetch = LAZY, cascade = ALL)
+    private Collection<Order> orders;
+
     public User() {
     }
 
@@ -109,6 +113,14 @@ public class User implements Serializable {
 
     public void setFeedbacks(Collection<Feedback> feedbacks) {
         this.feedbacks = feedbacks;
+    }
+
+    public Collection<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Collection<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
