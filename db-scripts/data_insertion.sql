@@ -1,4 +1,5 @@
 INSERT INTO USERS(NAME, EMAIL, PASSWORD, ROLE) VALUES
+("Admin", "Admin", "pass", "admin"),
 ("Zaher", "a@b.com", "pass1", "user"),
 ("Salah", "c@d.com", "pass2", "user"),
 ("Fawzi", "e@f.com", "pass3", "user");

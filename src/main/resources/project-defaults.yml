@@ -6,10 +6,13 @@ swarm:
           auth-method: BASIC
           security-domain: my-domain
         security-constraints:
-          - url-pattern: /admin/*
+          - url-pattern: /food-portal/admin/*
             methods: [GET, POST, DELETE]
             roles: [admin]
           - url-pattern: /food-portal/user/*
+            methods: [GET, POST]
+            roles: [admin, user]
+          - url-pattern: /food-portal/user-order/*
             methods: [GET, POST]
             roles: [admin, user]
   security:

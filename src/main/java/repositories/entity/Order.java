@@ -1,6 +1,8 @@
 package repositories.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 import java.io.Serializable;
@@ -33,6 +35,11 @@ public class Order implements Serializable {
 
     @OneToMany(mappedBy = "orderAssociation", cascade = ALL, orphanRemoval = true)
     private Collection<OrderItem> items;
+
+    @ManyToOne
+    @JoinColumn(name = "USER_ID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
+    private User user;
 
 
     public Order() {
@@ -73,6 +80,14 @@ public class Order implements Serializable {
 
     public void setItems(Collection<OrderItem> items) {
         this.items = items;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
